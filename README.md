@@ -12,3 +12,6 @@ docker run -d --name first-technical-test-back -p 3000:80 -v C:\www\technical-te
 
 Note: Replace the project path C:\www\technical-test-0318231044 with the absolute path of your project team
 
+To deploy the MySQL server, the front from the back in a single command, we execute the following command
+
+docker-compose up -d
