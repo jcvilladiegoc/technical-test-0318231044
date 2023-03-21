@@ -5,5 +5,7 @@
 
     // Controllers
     require_once PROJECT_ROOT_PATH . "controllers/BaseController.php";
+    require_once PROJECT_ROOT_PATH . "models/BaseModel.php";
+    require_once PROJECT_ROOT_PATH . "models/Company.php";
 
 ?>
