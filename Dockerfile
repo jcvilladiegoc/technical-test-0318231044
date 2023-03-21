@@ -1,5 +1,8 @@
 FROM centos:7
 
+ARG db_host_server=127.0.0.1
+ARG is_backend=0
+
 COPY ./conf/nginx.repo /etc/yum.repos.d/nginx.repo
 
 RUN                                                                          \
