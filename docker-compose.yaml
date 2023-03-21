@@ -14,5 +14,32 @@ services:
       MYSQL_ROOT_PASSWORD: 87654321*
     ports:
       - "3307:3306"
+    networks:
+      - net-application
+  back:
+    image: php7
+    container_name: backend
+    volumes:
+      - ./api:/var/www/html
+    ports:
+      - "3000:80"
+    networks:
+      - net-application
+    depends_on:
+      - mysql
+    environment:
+      db_host_server: mysql
+      is_backend: 1
+  front:
+    image: php7
+    container_name: frontend
+    volumes:
+      - ./frontend:/var/www/html
+    ports:
+      - "80:80"
+    networks:
+      - net-application
 volumes:
   container-volume:
+networks:
+  net-application:
